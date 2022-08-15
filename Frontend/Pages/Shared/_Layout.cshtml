@@ -9,8 +9,32 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Frontend.styles.css" asp-append-version="true" />
+    <style>
+        #card-custom {
+            background: hsla(0, 0%, 100%, 0.15);
+        }
+        body {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(
+                650px circle at 0% 0%,
+                hsl(218, 41%, 35%) 15%,
+                hsl(218, 41%, 30%) 35%,
+                hsl(218, 41%, 20%) 75%,
+                hsl(218, 41%, 19%) 80%,
+                transparent 100%
+            ),
+            radial-gradient(
+            1250px circle at 100% 100%,
+            hsl(218, 41%, 45%) 15%,
+            hsl(218, 41%, 30%) 35%,
+            hsl(218, 41%, 20%) 75%,
+            hsl(218, 41%, 19%) 80%,
+            transparent 100%
+            );
+        }
+    </style>
 </head>
-<body class="bg-dark text-center text-white">
+<body class="text-center text-white">
     <div class="container d-flex flex-column min-vh-100 p-3">
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="col text-start">
