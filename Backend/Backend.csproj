@@ -14,6 +14,7 @@
     <None Remove="Google.Protobuf" />
     <None Remove="Grpc.AspNetCore.Server" />
     <None Remove="Grpc.AspNetCore" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Grpc.Tools" Version="2.48.0">
@@ -23,5 +24,8 @@
     <PackageReference Include="Google.Protobuf" Version="3.21.5" />
     <PackageReference Include="Grpc.AspNetCore.Server" Version="2.47.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

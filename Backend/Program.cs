@@ -35,17 +35,17 @@ public partial class Program
 
 public class BigOvenService : CategoryService.CategoryServiceBase
 {
-    //private static readonly Backend.Services.JsonService _service = new(
-    //    Program.config["RecipesPath"],
-    //    Program.config["CategoriesPath"]
-    //);
+    private static readonly Backend.Services.JsonService _service = new(
+        Program.config["RecipesPath"],
+        Program.config["CategoriesPath"]
+    );
 
-    //public override Task<Categories> ListCategories(Backend.Void request, ServerCallContext context)
-    //{
-    //    Categories categories = new();
-    //    List<Category> categoriesList = _service.ListCategories();
-    //    foreach (Category category in categoriesList)
-    //        categories.CategoriesList.Add(category);
-    //    return Task.FromResult(categories);
-    //}
+    public override Task<Categories> ListCategories(Backend.Void request, ServerCallContext context)
+    {
+        Categories categories = new();
+        List<Category> categoriesList = _service.ListCategories();
+        foreach (Category category in categoriesList)
+            categories.CategoriesList.Add(category);
+        return Task.FromResult(categories);
+    }
 }
