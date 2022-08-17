@@ -9,15 +9,8 @@ var builder = WebApplication.CreateBuilder();
 builder.Services.AddGrpc();
 builder.WebHost.ConfigureKestrel(k =>
 {
-    // k.ListenLocalhost(5057, o => o.Protocols = HttpProtocols.Http2);
-    k.ListenLocalhost(5057);
+    k.ListenLocalhost(5057, o => o.Protocols = HttpProtocols.Http2);
 });
-
-// builder.WebHost.ConfigureKestrel(k =>
-// {
-//     k.ConfigureEndpointDefaults(options => options.Protocols = HttpProtocols.Http2);
-//     k.ListenLocalhost(5500, o => o.Protocols = HttpProtocols.Http2);
-// });
 
 var app = builder.Build();
 
