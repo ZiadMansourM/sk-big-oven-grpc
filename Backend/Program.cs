@@ -41,4 +41,14 @@ public class BigOvenService : CategoryService.CategoryServiceBase
             categories.CategoriesList.Add(category);
         return Task.FromResult(categories);
     }
+
+    public override Task<Category> CreateCategory(Backend.CategoryName request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.CreateCategory(request.Name));
+    }
+
+    public override Task<Category> UpdateCategory(Backend.Category request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.UpdateCategory(new Guid(request.Id), request.Name));
+    }
 }

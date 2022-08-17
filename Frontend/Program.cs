@@ -1,5 +1,7 @@
-﻿using Frontend;
+﻿using System.Text.Json;
+using Frontend;
 using Grpc.Net.Client;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,23 +23,6 @@ public partial class Program
         .Build();
 }
 
-// The port number must match the port of the gRPC server.
-//using var channel = GrpcChannel.ForAddress("http://localhost:5057");
-//var client = new Frontend.CategoryService.CategoryServiceClient(channel);
-//Console.WriteLine("START...");
-//var reply = client.ListCategories(new Frontend.Void());
-//foreach (Category cat in reply.CategoriesList)
-//    Console.WriteLine($"Id: {cat.Id}, Name: {cat.Name}");
-//Console.WriteLine("Press any key to exit...");
-//Console.ReadKey();
-
-
-//if (reply != null)
-//{
-//    foreach (Category cat in reply.CategoriesList)
-//        Console.WriteLine($"Id: {cat.Id}, Name: {cat.Name}");
-//}
-
 public static class Requests
 {
     private readonly static Grpc.Net.Client.GrpcChannel _channel = GrpcChannel.ForAddress(Program.config["baseAddress"]);
@@ -46,5 +31,23 @@ public static class Requests
     async public static Task<Categories> ListCategories()
     {
         return await _client.ListCategoriesAsync(new Frontend.Void());
+    }
+
+    async public static Task<Category> CreateCategory(string name)
+    {
+        return await _client.CreateCategoryAsync(
+            new CategoryName { Name = name }
+        );
+    }
+
+    async public static Task<Category> UpdateCategory(Guid id, string name)
+    {
+        return await _client.UpdateCategoryAsync(
+            new Category
+            {
+                Id=id.ToString(),
+                Name=name
+            }
+        );
     }
 }

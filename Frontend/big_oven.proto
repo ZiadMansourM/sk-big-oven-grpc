@@ -7,8 +7,8 @@ package protos;
 service CategoryService {
   rpc ListCategories (Void) returns (Categories) {}
   rpc GetCategory (Id) returns (Category) {}
-  rpc CreateCategory (Id) returns (Category) {}
-  rpc UpdateCategory (Id) returns (Category) {}
+  rpc CreateCategory (CategoryName) returns (Category) {}
+  rpc UpdateCategory (Category) returns (Category) {}
   rpc DeleteCategory (Id) returns (Void) {}
 }
 
@@ -16,6 +16,10 @@ message Void {}
 
 message Id {
     string id = 1;
+}
+
+message CategoryName {
+    string name = 1;
 }
 
 message Category {

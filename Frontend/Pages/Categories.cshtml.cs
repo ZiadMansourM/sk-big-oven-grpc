@@ -21,45 +21,17 @@ public class CategoriesModel : PageModel
         Messages = msgs;
     }
 
-    // public async Task<IActionResult> OnPostCreate(string categoryName)
-    // {
-    //     Models.CategoryValidator validator = new();
-    //     ValidationResult results = validator.Validate(
-    //         new Models.Category(categoryName)
-    //     );
-    //     if (results.IsValid)
-    //         _ = await Requests.CreateCategory(categoryName);
-    //     else
-    //     {
-    //         List<string> msgs = new();
-    //         foreach (var failure in results.Errors)
-    //             msgs.Add(
-    //                 $"Property {failure.PropertyName}: {failure.ErrorMessage}"
-    //             );
-    //         Messages = msgs;
-    //     }
-    //     return RedirectToPage("./Categories", new { msgs = Messages });
-    // }
+    public async Task<IActionResult> OnPostCreate(string categoryName)
+    {
+        _ = await Requests.CreateCategory(categoryName);
+        return RedirectToPage("./Categories", new { msgs = Messages });
+    }
 
-    // public async Task<IActionResult> OnPostUpdate(string id, string categoryName)
-    // {
-    //     Models.CategoryValidator validator = new();
-    //     ValidationResult results = validator.Validate(
-    //         new Models.Category(categoryName)
-    //     );
-    //     if (results.IsValid)
-    //         _ = await Requests.UpdateCategory(new Guid(id), categoryName);
-    //     else
-    //     {
-    //         List<string> msgs = new();
-    //         foreach (var failure in results.Errors)
-    //             msgs.Add(
-    //                 $"Property {failure.PropertyName}: {failure.ErrorMessage}"
-    //             );
-    //         Messages = msgs;
-    //     }
-    //     return RedirectToPage("./Categories", new { msgs = Messages });
-    // }
+    public async Task<IActionResult> OnPostUpdate(string id, string categoryName)
+    {
+        _ = await Requests.UpdateCategory(new Guid(id), categoryName);
+        return RedirectToPage("./Categories", new { msgs = Messages });
+    }
 
     // public async Task<IActionResult> OnPostDelete(Guid id)
     // {
