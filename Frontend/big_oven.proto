@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Frontend";
+
+package protos;
+
+service CategoryService {
+  rpc ListCategories (Void) returns (Categories) {}
+  rpc GetCategory (Id) returns (Category) {}
+  rpc CreateCategory (Id) returns (Category) {}
+  rpc UpdateCategory (Id) returns (Category) {}
+  rpc DeleteCategory (Id) returns (Void) {}
+}
+
+message Void {}
+
+message Id {
+    string id = 1;
+}
+
+message Category {
+    string id = 1;
+    string name = 2;
+}
+
+message Categories {
+    repeated Category categories_list = 1;
+}
