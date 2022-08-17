@@ -50,4 +50,11 @@ public static class Requests
             }
         );
     }
+
+    async public static Task DeleteCategory(Guid id)
+    {
+        await _client.DeleteCategoryAsync(
+            new CategoryId { Id=id.ToString() }
+        );
+    }
 }

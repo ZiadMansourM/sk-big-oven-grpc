@@ -50,7 +50,7 @@ namespace Frontend {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Frontend.Categories> __Marshaller_protos_Categories = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Frontend.Categories.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Frontend.Id> __Marshaller_protos_Id = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Frontend.Id.Parser));
+    static readonly grpc::Marshaller<global::Frontend.CategoryId> __Marshaller_protos_CategoryId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Frontend.CategoryId.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Frontend.Category> __Marshaller_protos_Category = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Frontend.Category.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -65,11 +65,11 @@ namespace Frontend {
         __Marshaller_protos_Categories);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Frontend.Id, global::Frontend.Category> __Method_GetCategory = new grpc::Method<global::Frontend.Id, global::Frontend.Category>(
+    static readonly grpc::Method<global::Frontend.CategoryId, global::Frontend.Category> __Method_GetCategory = new grpc::Method<global::Frontend.CategoryId, global::Frontend.Category>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetCategory",
-        __Marshaller_protos_Id,
+        __Marshaller_protos_CategoryId,
         __Marshaller_protos_Category);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -89,12 +89,12 @@ namespace Frontend {
         __Marshaller_protos_Category);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Frontend.Id, global::Frontend.Void> __Method_DeleteCategory = new grpc::Method<global::Frontend.Id, global::Frontend.Void>(
+    static readonly grpc::Method<global::Frontend.CategoryId, global::Frontend.Category> __Method_DeleteCategory = new grpc::Method<global::Frontend.CategoryId, global::Frontend.Category>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteCategory",
-        __Marshaller_protos_Id,
-        __Marshaller_protos_Void);
+        __Marshaller_protos_CategoryId,
+        __Marshaller_protos_Category);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -113,7 +113,7 @@ namespace Frontend {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Frontend.Category> GetCategory(global::Frontend.Id request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Frontend.Category> GetCategory(global::Frontend.CategoryId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -131,7 +131,7 @@ namespace Frontend {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Frontend.Void> DeleteCategory(global::Frontend.Id request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Frontend.Category> DeleteCategory(global::Frontend.CategoryId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -186,22 +186,22 @@ namespace Frontend {
         return CallInvoker.AsyncUnaryCall(__Method_ListCategories, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Frontend.Category GetCategory(global::Frontend.Id request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Frontend.Category GetCategory(global::Frontend.CategoryId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCategory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Frontend.Category GetCategory(global::Frontend.Id request, grpc::CallOptions options)
+      public virtual global::Frontend.Category GetCategory(global::Frontend.CategoryId request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCategory, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> GetCategoryAsync(global::Frontend.Id request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> GetCategoryAsync(global::Frontend.CategoryId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCategoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> GetCategoryAsync(global::Frontend.Id request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> GetCategoryAsync(global::Frontend.CategoryId request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCategory, null, options, request);
       }
@@ -246,22 +246,22 @@ namespace Frontend {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCategory, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Frontend.Void DeleteCategory(global::Frontend.Id request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Frontend.Category DeleteCategory(global::Frontend.CategoryId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCategory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Frontend.Void DeleteCategory(global::Frontend.Id request, grpc::CallOptions options)
+      public virtual global::Frontend.Category DeleteCategory(global::Frontend.CategoryId request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCategory, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Frontend.Void> DeleteCategoryAsync(global::Frontend.Id request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> DeleteCategoryAsync(global::Frontend.CategoryId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCategoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Frontend.Void> DeleteCategoryAsync(global::Frontend.Id request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Frontend.Category> DeleteCategoryAsync(global::Frontend.CategoryId request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCategory, null, options, request);
       }
@@ -294,10 +294,10 @@ namespace Frontend {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CategoryServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListCategories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.Void, global::Frontend.Categories>(serviceImpl.ListCategories));
-      serviceBinder.AddMethod(__Method_GetCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.Id, global::Frontend.Category>(serviceImpl.GetCategory));
+      serviceBinder.AddMethod(__Method_GetCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.CategoryId, global::Frontend.Category>(serviceImpl.GetCategory));
       serviceBinder.AddMethod(__Method_CreateCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.CategoryName, global::Frontend.Category>(serviceImpl.CreateCategory));
       serviceBinder.AddMethod(__Method_UpdateCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.Category, global::Frontend.Category>(serviceImpl.UpdateCategory));
-      serviceBinder.AddMethod(__Method_DeleteCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.Id, global::Frontend.Void>(serviceImpl.DeleteCategory));
+      serviceBinder.AddMethod(__Method_DeleteCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Frontend.CategoryId, global::Frontend.Category>(serviceImpl.DeleteCategory));
     }
 
   }

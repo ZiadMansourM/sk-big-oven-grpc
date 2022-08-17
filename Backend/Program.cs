@@ -51,4 +51,9 @@ public class BigOvenService : CategoryService.CategoryServiceBase
     {
         return Task.FromResult(_service.UpdateCategory(new Guid(request.Id), request.Name));
     }
+
+    public override Task<Backend.Category> DeleteCategory(Backend.CategoryId request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.DeleteCategory(new Guid(request.Id)));
+    }
 }

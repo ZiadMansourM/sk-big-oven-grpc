@@ -24,22 +24,23 @@ namespace Backend {
     static BigOvenReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5iaWdfb3Zlbi5wcm90bxIGcHJvdG9zIgYKBFZvaWQiEAoCSWQSCgoCaWQY",
-            "ASABKAkiHAoMQ2F0ZWdvcnlOYW1lEgwKBG5hbWUYASABKAkiJAoIQ2F0ZWdv",
-            "cnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSI3CgpDYXRlZ29yaWVzEikK",
-            "D2NhdGVnb3JpZXNfbGlzdBgBIAMoCzIQLnByb3Rvcy5DYXRlZ29yeTKYAgoP",
-            "Q2F0ZWdvcnlTZXJ2aWNlEjQKDkxpc3RDYXRlZ29yaWVzEgwucHJvdG9zLlZv",
-            "aWQaEi5wcm90b3MuQ2F0ZWdvcmllcyIAEi0KC0dldENhdGVnb3J5EgoucHJv",
-            "dG9zLklkGhAucHJvdG9zLkNhdGVnb3J5IgASOgoOQ3JlYXRlQ2F0ZWdvcnkS",
-            "FC5wcm90b3MuQ2F0ZWdvcnlOYW1lGhAucHJvdG9zLkNhdGVnb3J5IgASNgoO",
-            "VXBkYXRlQ2F0ZWdvcnkSEC5wcm90b3MuQ2F0ZWdvcnkaEC5wcm90b3MuQ2F0",
-            "ZWdvcnkiABIsCg5EZWxldGVDYXRlZ29yeRIKLnByb3Rvcy5JZBoMLnByb3Rv",
-            "cy5Wb2lkIgBCCqoCB0JhY2tlbmRiBnByb3RvMw=="));
+            "Cg5iaWdfb3Zlbi5wcm90bxIGcHJvdG9zIgYKBFZvaWQiGAoKQ2F0ZWdvcnlJ",
+            "ZBIKCgJpZBgBIAEoCSIcCgxDYXRlZ29yeU5hbWUSDAoEbmFtZRgBIAEoCSIk",
+            "CghDYXRlZ29yeRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJIjcKCkNhdGVn",
+            "b3JpZXMSKQoPY2F0ZWdvcmllc19saXN0GAEgAygLMhAucHJvdG9zLkNhdGVn",
+            "b3J5MqwCCg9DYXRlZ29yeVNlcnZpY2USNAoOTGlzdENhdGVnb3JpZXMSDC5w",
+            "cm90b3MuVm9pZBoSLnByb3Rvcy5DYXRlZ29yaWVzIgASNQoLR2V0Q2F0ZWdv",
+            "cnkSEi5wcm90b3MuQ2F0ZWdvcnlJZBoQLnByb3Rvcy5DYXRlZ29yeSIAEjoK",
+            "DkNyZWF0ZUNhdGVnb3J5EhQucHJvdG9zLkNhdGVnb3J5TmFtZRoQLnByb3Rv",
+            "cy5DYXRlZ29yeSIAEjYKDlVwZGF0ZUNhdGVnb3J5EhAucHJvdG9zLkNhdGVn",
+            "b3J5GhAucHJvdG9zLkNhdGVnb3J5IgASOAoORGVsZXRlQ2F0ZWdvcnkSEi5w",
+            "cm90b3MuQ2F0ZWdvcnlJZBoQLnByb3Rvcy5DYXRlZ29yeSIAQgqqAgdCYWNr",
+            "ZW5kYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Void), global::Backend.Void.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Id), global::Backend.Id.Parser, new[]{ "Id_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Backend.CategoryId), global::Backend.CategoryId.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.CategoryName), global::Backend.CategoryName.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Category), global::Backend.Category.Parser, new[]{ "Id", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Categories), global::Backend.Categories.Parser, new[]{ "CategoriesList" }, null, null, null, null)
@@ -201,16 +202,16 @@ namespace Backend {
 
   }
 
-  public sealed partial class Id : pb::IMessage<Id>
+  public sealed partial class CategoryId : pb::IMessage<CategoryId>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Id> _parser = new pb::MessageParser<Id>(() => new Id());
+    private static readonly pb::MessageParser<CategoryId> _parser = new pb::MessageParser<CategoryId>(() => new CategoryId());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Id> Parser { get { return _parser; } }
+    public static pb::MessageParser<CategoryId> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -226,7 +227,7 @@ namespace Backend {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Id() {
+    public CategoryId() {
       OnConstruction();
     }
 
@@ -234,23 +235,23 @@ namespace Backend {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Id(Id other) : this() {
+    public CategoryId(CategoryId other) : this() {
       id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Id Clone() {
-      return new Id(this);
+    public CategoryId Clone() {
+      return new CategoryId(this);
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int Id_FieldNumber = 1;
+    public const int IdFieldNumber = 1;
     private string id_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Id_ {
+    public string Id {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
@@ -260,19 +261,19 @@ namespace Backend {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as Id);
+      return Equals(other as CategoryId);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Id other) {
+    public bool Equals(CategoryId other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id_ != other.Id_) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -280,7 +281,7 @@ namespace Backend {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id_.Length != 0) hash ^= Id_.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -299,9 +300,9 @@ namespace Backend {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id_.Length != 0) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Id_);
+        output.WriteString(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -313,9 +314,9 @@ namespace Backend {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id_.Length != 0) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Id_);
+        output.WriteString(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -327,8 +328,8 @@ namespace Backend {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id_.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id_);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -338,12 +339,12 @@ namespace Backend {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Id other) {
+    public void MergeFrom(CategoryId other) {
       if (other == null) {
         return;
       }
-      if (other.Id_.Length != 0) {
-        Id_ = other.Id_;
+      if (other.Id.Length != 0) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -361,7 +362,7 @@ namespace Backend {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id_ = input.ReadString();
+            Id = input.ReadString();
             break;
           }
         }
@@ -380,7 +381,7 @@ namespace Backend {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Id_ = input.ReadString();
+            Id = input.ReadString();
             break;
           }
         }

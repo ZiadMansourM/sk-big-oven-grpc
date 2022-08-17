@@ -33,9 +33,9 @@ public class CategoriesModel : PageModel
         return RedirectToPage("./Categories", new { msgs = Messages });
     }
 
-    // public async Task<IActionResult> OnPostDelete(Guid id)
-    // {
-    //     await Requests.DeleteCategory(id);
-    //     return RedirectToPage("./Categories", new { msgs = Messages });
-    // }
+    public async Task<IActionResult> OnPostDelete(Guid id)
+    {
+        await Requests.DeleteCategory(id);
+        return RedirectToPage("./Categories", new { msgs = Messages });
+    }
 }

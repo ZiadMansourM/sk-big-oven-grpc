@@ -78,4 +78,21 @@ public class JsonService
         OverWriteCategories(categories);
         return category;
     }
+
+    public Category DeleteCategory(Guid id)
+    {
+        // Cascade to Recipe
+        var category = ListCategories().Where(c => c.Id == id.ToString()).First();
+        //var jsonString = ReadRecipes();
+        //var recipes = JsonSerializer.Deserialize<List<Models.Recipe>>(jsonString)!;
+        //foreach (var recipe in recipes)
+        //{
+        //    recipe.CategoriesIds.Remove(category.Id);
+        //}
+        //OverWriteRecipes(recipes);
+        // Delete Category
+        var categories = ListCategories().FindAll(c => c.Id != id.ToString());
+        OverWriteCategories(categories);
+        return category;
+    }
 }
