@@ -7,17 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Swashbuckle.AspNetCore" />
-    <None Remove="FluentValidation" />
-    <None Remove="Services\" />
-    <None Remove="Models\" />
+    <Protobuf Include="**/*.proto" OutputDir="%(RelativeDir)" CompileOutputs="false" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <None Remove="Grpc.Tools" />
+    <None Remove="Google.Protobuf" />
+    <None Remove="Grpc.AspNetCore.Server" />
+    <None Remove="Grpc.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Models\" />
+    <PackageReference Include="Grpc.Tools" Version="2.48.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="2.47.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
   </ItemGroup>
 </Project>
