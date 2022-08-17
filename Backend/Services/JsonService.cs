@@ -42,8 +42,6 @@ public class JsonService
     {
         var jsonString = ReadCategories();
         var categories = JsonSerializer.Deserialize<List<Category>>(jsonString)!;
-        foreach (Category cat in categories)
-            Console.WriteLine($"Id: {cat.Id}, Name: {cat.Name}");
         return categories;
     }
 }

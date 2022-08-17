@@ -15,11 +15,9 @@ public class CategoriesModel : PageModel
 
     public async Task OnGet(List<string> msgs)
     {
-        Console.WriteLine("DEBUG ONE");
-        Requests.ListCategories();
-        //CategoriesRes = await Requests.ListCategories();
-        //foreach(Category cat in CategoriesRes)
-        //    Console.WriteLine(cat);
+        Categories categories = await Requests.ListCategories();
+        foreach (Category cat in categories.CategoriesList)
+            CategoriesRes.Add(cat);
         Messages = msgs;
     }
 
