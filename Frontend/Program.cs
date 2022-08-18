@@ -26,11 +26,16 @@ public partial class Program
 public static class Requests
 {
     private readonly static Grpc.Net.Client.GrpcChannel _channel = GrpcChannel.ForAddress(Program.config["baseAddress"]);
-    private readonly static Frontend.CategoryService.CategoryServiceClient _client = new(_channel);
+    private readonly static Frontend.BigOven.BigOvenClient _client = new(_channel);
 
     async public static Task<Categories> ListCategories()
     {
         return await _client.ListCategoriesAsync(new Frontend.Void());
+    }
+
+    async public static Task<Recipes> ListRecipes()
+    {
+        return await _client.ListRecipesAsync(new Frontend.Void());
     }
 
     async public static Task<Category> CreateCategory(string name)

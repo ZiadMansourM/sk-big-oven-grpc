@@ -12,7 +12,7 @@
         </a>
     </div>
 }
-@* 
+ 
 <div class="row">
     <div class="col">
         <h2 class="text-start px-4">Recipes</h2>
@@ -39,7 +39,7 @@
     </thead>
     <tbody>
         @{int i = 1;}
-        @foreach (var recipe in Model.Recipes)
+        @foreach (var recipe in Model.RecipesRes)
         {
             <tr class="d-flex">
                 <th class="col-1" scope="row">@(i++)</th>
@@ -197,10 +197,10 @@
                                     <label for="floatingTextarea2">Instructions</label>
                                 </div>
                                 @{int p = 0;}
-                                @foreach (var category in Model.Categories)
+                                @foreach (var category in Model.CategoriesRes)
                                 {
                                     <div class="form-check form-switch text-start">
-                                        <input class="form-check-input" name="categoriesIds" value="@category.Id" type="checkbox" id="@("flex" + @p)" @if (recipe.CategoriesIds.Contains(category.Id)) {<text> checked</text>}>
+                                        <input class="form-check-input" name="categoriesIds" value="@category.Id" type="checkbox" id="@("flex" + @p)" @if (recipe.CategoriesIds.Contains(new CategoryId {Id=category.Id})) {<text> checked</text>}>
                                         <label class="form-check-label" for="@("flex" + @p++)">@category.Name</label>
                                     </div>
                                 }
@@ -264,7 +264,7 @@
                         <label for="floatingTextarea2">Instructions</label>
                     </div>
                     @{int c = 0;}
-                    @foreach (var category in Model.Categories)
+                    @foreach (var category in Model.CategoriesRes)
                     {
                         <div class="form-check form-switch text-start">
                             <input class="form-check-input" name="categoriesIds" value="@category.Id" type="checkbox" id="@("flex" + @c)">
@@ -314,4 +314,4 @@
             </div>
         </div>
     </div>
-</div> *@
+</div> 

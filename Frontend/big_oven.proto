@@ -4,12 +4,18 @@ option csharp_namespace = "Frontend";
 
 package protos;
 
-service CategoryService {
+service BigOven {
   rpc ListCategories (Void) returns (Categories) {}
   rpc GetCategory (CategoryId) returns (Category) {}
   rpc CreateCategory (CategoryName) returns (Category) {}
   rpc UpdateCategory (Category) returns (Category) {}
   rpc DeleteCategory (CategoryId) returns (Category) {}
+
+  rpc ListRecipes (Void) returns (Recipes) {}
+  rpc GetRecipe (RecipeId) returns (Recipe) {}
+  rpc CreateRecipe (RecipeCreate) returns (Recipe) {}
+  rpc UpdateRecipe (Recipe) returns (Recipe) {}
+  rpc DeleteRecipe (RecipeId) returns (Recipe) {}
 }
 
 message Void {}
@@ -29,4 +35,35 @@ message Category {
 
 message Categories {
     repeated Category categories_list = 1;
+}
+
+message RecipeId {
+    string id = 1;
+}
+
+message IngredientLine {
+    string ingredient = 1;
+}
+
+message InstructionLine {
+    string instruction = 1;
+}
+
+message RecipeCreate {
+    string name = 1;
+    repeated IngredientLine ingredients = 2;
+    repeated InstructionLine instructions = 3;
+    repeated CategoryId categories_ids = 4;
+}
+
+message Recipe {
+    string id = 1;
+    string name = 2;
+    repeated IngredientLine ingredients = 3;
+    repeated InstructionLine instructions = 4;
+    repeated CategoryId categories_ids = 5;
+}
+
+message Recipes {
+    repeated Recipe recipes_list = 1;
 }

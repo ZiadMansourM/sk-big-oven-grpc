@@ -11,18 +11,23 @@ namespace Frontend.Pages;
 public class RecipesModel : PageModel
 {
     public List<string> Messages { get; set; } = new();
-    // public List<Models.Recipe> Recipes { get; set; } = new();
-    // public List<Models.Category> Categories { get; set; } = new();
+    public List<Recipe> RecipesRes { get; set; } = new();
+    public List<Category> CategoriesRes { get; set; } = new();
     public List<List<string>> CategoriesNames { get; set; } = new();
     public Dictionary<Guid, string> catDict { get; set; } = new();
 
-    // public async Task OnGet(List<string> msgs)
-    // {
-    //     Recipes = await Requests.ListRecipes();
-    //     Categories = await Requests.ListCategories();
-    //     CategoriesNames = GetCategoriesNames(Recipes, Categories);
-    //     Messages = msgs;
-    // }
+    public async Task OnGet(List<string> msgs)
+    {
+        Recipes recipes = await Requests.ListRecipes();
+        foreach (Recipe recipe in recipes.RecipesList)
+            RecipesRes.Add(recipe);
+        Categories categories = await Requests.ListCategories();
+        foreach (Category cat in categories.CategoriesList)
+            CategoriesRes.Add(cat);
+
+        CategoriesNames = GetCategoriesNames(RecipesRes, CategoriesRes);
+        Messages = msgs;
+    }
 
     // public async Task<IActionResult> OnPostCreate()
     // {
@@ -95,20 +100,20 @@ public class RecipesModel : PageModel
     //     return RedirectToPage("./Recipes", new { msgs = Messages });
     // }
 
-    // private List<List<string>> GetCategoriesNames(List<Models.Recipe> Recipes, List<Models.Category> categories)
-    // {
-    //     Dictionary<Guid, string> Dict = new();
-    //     foreach (Models.Category cat in categories)
-    //         Dict.Add(cat.Id, cat.Name);
-    //     catDict = Dict;
-    //     List<List<string>> catNames = new();
-    //     foreach (Models.Recipe recipe in Recipes)
-    //     {
-    //         List<string> names = new();
-    //         foreach (var id in recipe.CategoriesIds)
-    //             names.Add(catDict[id]);
-    //         catNames.Add(names);
-    //     }
-    //     return catNames;
-    // }
+    private List<List<string>> GetCategoriesNames(List<Recipe> recipes, List<Category> categories)
+    {
+        Dictionary<Guid, string> Dict = new();
+        foreach (Category cat in categories)
+            Dict.Add(new Guid(cat.Id), cat.Name);
+        catDict = Dict;
+        List<List<string>> catNames = new();
+        foreach (Recipe recipe in recipes)
+        {
+            List<string> names = new();
+            foreach (var id in recipe.CategoriesIds)
+                names.Add(catDict[new Guid(id.Id)]);
+            catNames.Add(names);
+        }
+        return catNames;
+    }
 }

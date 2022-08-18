@@ -8,9 +8,9 @@
 using grpc = global::Grpc.Core;
 
 namespace Backend {
-  public static partial class CategoryService
+  public static partial class BigOven
   {
-    static readonly string __ServiceName = "protos.CategoryService";
+    static readonly string __ServiceName = "protos.BigOven";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -55,6 +55,14 @@ namespace Backend {
     static readonly grpc::Marshaller<global::Backend.Category> __Marshaller_protos_Category = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.Category.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Backend.CategoryName> __Marshaller_protos_CategoryName = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.CategoryName.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Backend.Recipes> __Marshaller_protos_Recipes = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.Recipes.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Backend.RecipeId> __Marshaller_protos_RecipeId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.RecipeId.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Backend.Recipe> __Marshaller_protos_Recipe = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.Recipe.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Backend.RecipeCreate> __Marshaller_protos_RecipeCreate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Backend.RecipeCreate.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Backend.Void, global::Backend.Categories> __Method_ListCategories = new grpc::Method<global::Backend.Void, global::Backend.Categories>(
@@ -96,15 +104,55 @@ namespace Backend {
         __Marshaller_protos_CategoryId,
         __Marshaller_protos_Category);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Backend.Void, global::Backend.Recipes> __Method_ListRecipes = new grpc::Method<global::Backend.Void, global::Backend.Recipes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRecipes",
+        __Marshaller_protos_Void,
+        __Marshaller_protos_Recipes);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Backend.RecipeId, global::Backend.Recipe> __Method_GetRecipe = new grpc::Method<global::Backend.RecipeId, global::Backend.Recipe>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetRecipe",
+        __Marshaller_protos_RecipeId,
+        __Marshaller_protos_Recipe);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Backend.RecipeCreate, global::Backend.Recipe> __Method_CreateRecipe = new grpc::Method<global::Backend.RecipeCreate, global::Backend.Recipe>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateRecipe",
+        __Marshaller_protos_RecipeCreate,
+        __Marshaller_protos_Recipe);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Backend.Recipe, global::Backend.Recipe> __Method_UpdateRecipe = new grpc::Method<global::Backend.Recipe, global::Backend.Recipe>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateRecipe",
+        __Marshaller_protos_Recipe,
+        __Marshaller_protos_Recipe);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Backend.RecipeId, global::Backend.Recipe> __Method_DeleteRecipe = new grpc::Method<global::Backend.RecipeId, global::Backend.Recipe>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRecipe",
+        __Marshaller_protos_RecipeId,
+        __Marshaller_protos_Recipe);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
       get { return global::Backend.BigOvenReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of CategoryService</summary>
-    [grpc::BindServiceMethod(typeof(CategoryService), "BindService")]
-    public abstract partial class CategoryServiceBase
+    /// <summary>Base class for server-side implementations of BigOven</summary>
+    [grpc::BindServiceMethod(typeof(BigOven), "BindService")]
+    public abstract partial class BigOvenBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Backend.Categories> ListCategories(global::Backend.Void request, grpc::ServerCallContext context)
@@ -136,32 +184,62 @@ namespace Backend {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Backend.Recipes> ListRecipes(global::Backend.Void request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Backend.Recipe> GetRecipe(global::Backend.RecipeId request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Backend.Recipe> CreateRecipe(global::Backend.RecipeCreate request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Backend.Recipe> UpdateRecipe(global::Backend.Recipe request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Backend.Recipe> DeleteRecipe(global::Backend.RecipeId request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
-    /// <summary>Client for CategoryService</summary>
-    public partial class CategoryServiceClient : grpc::ClientBase<CategoryServiceClient>
+    /// <summary>Client for BigOven</summary>
+    public partial class BigOvenClient : grpc::ClientBase<BigOvenClient>
     {
-      /// <summary>Creates a new client for CategoryService</summary>
+      /// <summary>Creates a new client for BigOven</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public CategoryServiceClient(grpc::ChannelBase channel) : base(channel)
+      public BigOvenClient(grpc::ChannelBase channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for CategoryService that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for BigOven that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public CategoryServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public BigOvenClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected CategoryServiceClient() : base()
+      protected BigOvenClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected CategoryServiceClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected BigOvenClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -265,25 +343,130 @@ namespace Backend {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCategory, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipes ListRecipes(global::Backend.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRecipes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipes ListRecipes(global::Backend.Void request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRecipes, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipes> ListRecipesAsync(global::Backend.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRecipesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipes> ListRecipesAsync(global::Backend.Void request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRecipes, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe GetRecipe(global::Backend.RecipeId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRecipe(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe GetRecipe(global::Backend.RecipeId request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> GetRecipeAsync(global::Backend.RecipeId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetRecipeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> GetRecipeAsync(global::Backend.RecipeId request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe CreateRecipe(global::Backend.RecipeCreate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRecipe(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe CreateRecipe(global::Backend.RecipeCreate request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> CreateRecipeAsync(global::Backend.RecipeCreate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateRecipeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> CreateRecipeAsync(global::Backend.RecipeCreate request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe UpdateRecipe(global::Backend.Recipe request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRecipe(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe UpdateRecipe(global::Backend.Recipe request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> UpdateRecipeAsync(global::Backend.Recipe request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateRecipeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> UpdateRecipeAsync(global::Backend.Recipe request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe DeleteRecipe(global::Backend.RecipeId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRecipe(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Backend.Recipe DeleteRecipe(global::Backend.RecipeId request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRecipe, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> DeleteRecipeAsync(global::Backend.RecipeId request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRecipeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Backend.Recipe> DeleteRecipeAsync(global::Backend.RecipeId request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRecipe, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      protected override CategoryServiceClient NewInstance(ClientBaseConfiguration configuration)
+      protected override BigOvenClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new CategoryServiceClient(configuration);
+        return new BigOvenClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static grpc::ServerServiceDefinition BindService(CategoryServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(BigOvenBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListCategories, serviceImpl.ListCategories)
           .AddMethod(__Method_GetCategory, serviceImpl.GetCategory)
           .AddMethod(__Method_CreateCategory, serviceImpl.CreateCategory)
           .AddMethod(__Method_UpdateCategory, serviceImpl.UpdateCategory)
-          .AddMethod(__Method_DeleteCategory, serviceImpl.DeleteCategory).Build();
+          .AddMethod(__Method_DeleteCategory, serviceImpl.DeleteCategory)
+          .AddMethod(__Method_ListRecipes, serviceImpl.ListRecipes)
+          .AddMethod(__Method_GetRecipe, serviceImpl.GetRecipe)
+          .AddMethod(__Method_CreateRecipe, serviceImpl.CreateRecipe)
+          .AddMethod(__Method_UpdateRecipe, serviceImpl.UpdateRecipe)
+          .AddMethod(__Method_DeleteRecipe, serviceImpl.DeleteRecipe).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -291,13 +474,18 @@ namespace Backend {
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, CategoryServiceBase serviceImpl)
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, BigOvenBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListCategories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.Void, global::Backend.Categories>(serviceImpl.ListCategories));
       serviceBinder.AddMethod(__Method_GetCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.CategoryId, global::Backend.Category>(serviceImpl.GetCategory));
       serviceBinder.AddMethod(__Method_CreateCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.CategoryName, global::Backend.Category>(serviceImpl.CreateCategory));
       serviceBinder.AddMethod(__Method_UpdateCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.Category, global::Backend.Category>(serviceImpl.UpdateCategory));
       serviceBinder.AddMethod(__Method_DeleteCategory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.CategoryId, global::Backend.Category>(serviceImpl.DeleteCategory));
+      serviceBinder.AddMethod(__Method_ListRecipes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.Void, global::Backend.Recipes>(serviceImpl.ListRecipes));
+      serviceBinder.AddMethod(__Method_GetRecipe, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.RecipeId, global::Backend.Recipe>(serviceImpl.GetRecipe));
+      serviceBinder.AddMethod(__Method_CreateRecipe, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.RecipeCreate, global::Backend.Recipe>(serviceImpl.CreateRecipe));
+      serviceBinder.AddMethod(__Method_UpdateRecipe, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.Recipe, global::Backend.Recipe>(serviceImpl.UpdateRecipe));
+      serviceBinder.AddMethod(__Method_DeleteRecipe, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Backend.RecipeId, global::Backend.Recipe>(serviceImpl.DeleteRecipe));
     }
 
   }

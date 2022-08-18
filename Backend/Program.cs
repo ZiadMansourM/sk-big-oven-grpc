@@ -26,7 +26,7 @@ public partial class Program
         .Build();
 }
 
-public class BigOvenService : CategoryService.CategoryServiceBase
+public class BigOvenService : BigOven.BigOvenBase
 {
     private static readonly Backend.Services.JsonService _service = new(
         Program.config["RecipesPath"],
@@ -40,6 +40,15 @@ public class BigOvenService : CategoryService.CategoryServiceBase
         foreach (Category category in categoriesList)
             categories.CategoriesList.Add(category);
         return Task.FromResult(categories);
+    }
+
+    public override Task<Recipes> ListRecipes(Backend.Void request, ServerCallContext context)
+    {
+        Recipes recipes = new();
+        List<Recipe> recipesList = _service.ListRecipes();
+        foreach (Recipe recipe in recipesList)
+            recipes.RecipesList.Add(recipe);
+        return Task.FromResult(recipes);
     }
 
     public override Task<Category> CreateCategory(Backend.CategoryName request, ServerCallContext context)

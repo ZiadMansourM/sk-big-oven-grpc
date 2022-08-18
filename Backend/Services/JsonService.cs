@@ -59,6 +59,13 @@ public class JsonService
         return categories;
     }
 
+    public List<Recipe> ListRecipes()
+    {
+        var jsonString = ReadRecipes();
+        var recipes = JsonSerializer.Deserialize<List<Recipe>>(jsonString)!;
+        return recipes;
+    }
+
     public Category CreateCategory(string name)
     {
         return SaveCategories(
