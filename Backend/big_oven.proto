@@ -41,27 +41,19 @@ message RecipeId {
     string id = 1;
 }
 
-message IngredientLine {
-    string ingredient = 1;
-}
-
-message InstructionLine {
-    string instruction = 1;
-}
-
 message RecipeCreate {
     string name = 1;
-    repeated IngredientLine ingredients = 2;
-    repeated InstructionLine instructions = 3;
-    repeated CategoryId categories_ids = 4;
+    repeated string ingredients = 2;
+    repeated string instructions = 3;
+    repeated string categories_ids = 4;
 }
 
 message Recipe {
     string id = 1;
     string name = 2;
-    repeated IngredientLine ingredients = 3;
-    repeated InstructionLine instructions = 4;
-    repeated CategoryId categories_ids = 5;
+    repeated string ingredients = 3;
+    repeated string instructions = 4;
+    repeated string categories_ids = 5;
 }
 
 message Recipes {

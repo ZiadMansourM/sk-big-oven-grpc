@@ -44,11 +44,7 @@ public class BigOvenService : BigOven.BigOvenBase
 
     public override Task<Recipes> ListRecipes(Backend.Void request, ServerCallContext context)
     {
-        Recipes recipes = new();
-        List<Recipe> recipesList = _service.ListRecipes();
-        foreach (Recipe recipe in recipesList)
-            recipes.RecipesList.Add(recipe);
-        return Task.FromResult(recipes);
+        return Task.FromResult(_service.ListRecipes());
     }
 
     public override Task<Category> CreateCategory(Backend.CategoryName request, ServerCallContext context)
@@ -56,13 +52,28 @@ public class BigOvenService : BigOven.BigOvenBase
         return Task.FromResult(_service.CreateCategory(request.Name));
     }
 
+    public override Task<Recipe> CreateRecipe(Backend.RecipeCreate request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.CreateRecipe(request));
+    }
+
     public override Task<Category> UpdateCategory(Backend.Category request, ServerCallContext context)
     {
         return Task.FromResult(_service.UpdateCategory(new Guid(request.Id), request.Name));
     }
 
+    public override Task<Recipe> UpdateRecipe(Backend.Recipe request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.UpdateRecipe(request));
+    }
+
     public override Task<Backend.Category> DeleteCategory(Backend.CategoryId request, ServerCallContext context)
     {
         return Task.FromResult(_service.DeleteCategory(new Guid(request.Id)));
+    }
+
+    public override Task<Recipe> DeleteRecipe(Backend.RecipeId request, ServerCallContext context)
+    {
+        return Task.FromResult(_service.DeleteRecipe(new RecipeId { Id=request.Id }));
     }
 }

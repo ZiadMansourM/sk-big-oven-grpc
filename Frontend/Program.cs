@@ -45,6 +45,11 @@ public static class Requests
         );
     }
 
+    async public static Task<Recipe> CreateRecipe(RecipeCreate recipe)
+    {
+        return await _client.CreateRecipeAsync(recipe);
+    }
+
     async public static Task<Category> UpdateCategory(Guid id, string name)
     {
         return await _client.UpdateCategoryAsync(
@@ -56,10 +61,22 @@ public static class Requests
         );
     }
 
+    async public static Task<Recipe> UpdateRecipe(Recipe recipe)
+    {
+        return await _client.UpdateRecipeAsync(recipe);
+    }
+
     async public static Task DeleteCategory(Guid id)
     {
         await _client.DeleteCategoryAsync(
             new CategoryId { Id=id.ToString() }
+        );
+    }
+
+    async public static Task DeleteRecipe(Guid id)
+    {
+        await _client.DeleteRecipeAsync(
+            new RecipeId { Id = id.ToString() }
         );
     }
 }

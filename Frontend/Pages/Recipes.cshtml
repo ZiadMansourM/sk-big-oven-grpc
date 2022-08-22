@@ -200,7 +200,7 @@
                                 @foreach (var category in Model.CategoriesRes)
                                 {
                                     <div class="form-check form-switch text-start">
-                                        <input class="form-check-input" name="categoriesIds" value="@category.Id" type="checkbox" id="@("flex" + @p)" @if (recipe.CategoriesIds.Contains(new CategoryId {Id=category.Id})) {<text> checked</text>}>
+                                        <input class="form-check-input" name="categoriesIds" value="@category.Id" type="checkbox" id="@("flex" + @p)" @if (recipe.CategoriesIds.Contains(category.Id)) {<text> checked</text>}>
                                         <label class="form-check-label" for="@("flex" + @p++)">@category.Name</label>
                                     </div>
                                 }

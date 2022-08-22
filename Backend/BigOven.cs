@@ -28,30 +28,25 @@ namespace Backend {
             "ZBIKCgJpZBgBIAEoCSIcCgxDYXRlZ29yeU5hbWUSDAoEbmFtZRgBIAEoCSIk",
             "CghDYXRlZ29yeRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJIjcKCkNhdGVn",
             "b3JpZXMSKQoPY2F0ZWdvcmllc19saXN0GAEgAygLMhAucHJvdG9zLkNhdGVn",
-            "b3J5IhYKCFJlY2lwZUlkEgoKAmlkGAEgASgJIiQKDkluZ3JlZGllbnRMaW5l",
-            "EhIKCmluZ3JlZGllbnQYASABKAkiJgoPSW5zdHJ1Y3Rpb25MaW5lEhMKC2lu",
-            "c3RydWN0aW9uGAEgASgJIqQBCgxSZWNpcGVDcmVhdGUSDAoEbmFtZRgBIAEo",
-            "CRIrCgtpbmdyZWRpZW50cxgCIAMoCzIWLnByb3Rvcy5JbmdyZWRpZW50TGlu",
-            "ZRItCgxpbnN0cnVjdGlvbnMYAyADKAsyFy5wcm90b3MuSW5zdHJ1Y3Rpb25M",
-            "aW5lEioKDmNhdGVnb3JpZXNfaWRzGAQgAygLMhIucHJvdG9zLkNhdGVnb3J5",
-            "SWQiqgEKBlJlY2lwZRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJEisKC2lu",
-            "Z3JlZGllbnRzGAMgAygLMhYucHJvdG9zLkluZ3JlZGllbnRMaW5lEi0KDGlu",
-            "c3RydWN0aW9ucxgEIAMoCzIXLnByb3Rvcy5JbnN0cnVjdGlvbkxpbmUSKgoO",
-            "Y2F0ZWdvcmllc19pZHMYBSADKAsyEi5wcm90b3MuQ2F0ZWdvcnlJZCIvCgdS",
-            "ZWNpcGVzEiQKDHJlY2lwZXNfbGlzdBgBIAMoCzIOLnByb3Rvcy5SZWNpcGUy",
-            "owQKB0JpZ092ZW4SNAoOTGlzdENhdGVnb3JpZXMSDC5wcm90b3MuVm9pZBoS",
-            "LnByb3Rvcy5DYXRlZ29yaWVzIgASNQoLR2V0Q2F0ZWdvcnkSEi5wcm90b3Mu",
-            "Q2F0ZWdvcnlJZBoQLnByb3Rvcy5DYXRlZ29yeSIAEjoKDkNyZWF0ZUNhdGVn",
-            "b3J5EhQucHJvdG9zLkNhdGVnb3J5TmFtZRoQLnByb3Rvcy5DYXRlZ29yeSIA",
-            "EjYKDlVwZGF0ZUNhdGVnb3J5EhAucHJvdG9zLkNhdGVnb3J5GhAucHJvdG9z",
-            "LkNhdGVnb3J5IgASOAoORGVsZXRlQ2F0ZWdvcnkSEi5wcm90b3MuQ2F0ZWdv",
-            "cnlJZBoQLnByb3Rvcy5DYXRlZ29yeSIAEi4KC0xpc3RSZWNpcGVzEgwucHJv",
-            "dG9zLlZvaWQaDy5wcm90b3MuUmVjaXBlcyIAEi8KCUdldFJlY2lwZRIQLnBy",
-            "b3Rvcy5SZWNpcGVJZBoOLnByb3Rvcy5SZWNpcGUiABI2CgxDcmVhdGVSZWNp",
-            "cGUSFC5wcm90b3MuUmVjaXBlQ3JlYXRlGg4ucHJvdG9zLlJlY2lwZSIAEjAK",
-            "DFVwZGF0ZVJlY2lwZRIOLnByb3Rvcy5SZWNpcGUaDi5wcm90b3MuUmVjaXBl",
-            "IgASMgoMRGVsZXRlUmVjaXBlEhAucHJvdG9zLlJlY2lwZUlkGg4ucHJvdG9z",
-            "LlJlY2lwZSIAQgqqAgdCYWNrZW5kYgZwcm90bzM="));
+            "b3J5IhYKCFJlY2lwZUlkEgoKAmlkGAEgASgJIl8KDFJlY2lwZUNyZWF0ZRIM",
+            "CgRuYW1lGAEgASgJEhMKC2luZ3JlZGllbnRzGAIgAygJEhQKDGluc3RydWN0",
+            "aW9ucxgDIAMoCRIWCg5jYXRlZ29yaWVzX2lkcxgEIAMoCSJlCgZSZWNpcGUS",
+            "CgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRITCgtpbmdyZWRpZW50cxgDIAMo",
+            "CRIUCgxpbnN0cnVjdGlvbnMYBCADKAkSFgoOY2F0ZWdvcmllc19pZHMYBSAD",
+            "KAkiLwoHUmVjaXBlcxIkCgxyZWNpcGVzX2xpc3QYASADKAsyDi5wcm90b3Mu",
+            "UmVjaXBlMqMECgdCaWdPdmVuEjQKDkxpc3RDYXRlZ29yaWVzEgwucHJvdG9z",
+            "LlZvaWQaEi5wcm90b3MuQ2F0ZWdvcmllcyIAEjUKC0dldENhdGVnb3J5EhIu",
+            "cHJvdG9zLkNhdGVnb3J5SWQaEC5wcm90b3MuQ2F0ZWdvcnkiABI6Cg5DcmVh",
+            "dGVDYXRlZ29yeRIULnByb3Rvcy5DYXRlZ29yeU5hbWUaEC5wcm90b3MuQ2F0",
+            "ZWdvcnkiABI2Cg5VcGRhdGVDYXRlZ29yeRIQLnByb3Rvcy5DYXRlZ29yeRoQ",
+            "LnByb3Rvcy5DYXRlZ29yeSIAEjgKDkRlbGV0ZUNhdGVnb3J5EhIucHJvdG9z",
+            "LkNhdGVnb3J5SWQaEC5wcm90b3MuQ2F0ZWdvcnkiABIuCgtMaXN0UmVjaXBl",
+            "cxIMLnByb3Rvcy5Wb2lkGg8ucHJvdG9zLlJlY2lwZXMiABIvCglHZXRSZWNp",
+            "cGUSEC5wcm90b3MuUmVjaXBlSWQaDi5wcm90b3MuUmVjaXBlIgASNgoMQ3Jl",
+            "YXRlUmVjaXBlEhQucHJvdG9zLlJlY2lwZUNyZWF0ZRoOLnByb3Rvcy5SZWNp",
+            "cGUiABIwCgxVcGRhdGVSZWNpcGUSDi5wcm90b3MuUmVjaXBlGg4ucHJvdG9z",
+            "LlJlY2lwZSIAEjIKDERlbGV0ZVJlY2lwZRIQLnByb3Rvcy5SZWNpcGVJZBoO",
+            "LnByb3Rvcy5SZWNpcGUiAEIKqgIHQmFja2VuZGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,8 +56,6 @@ namespace Backend {
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Category), global::Backend.Category.Parser, new[]{ "Id", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Categories), global::Backend.Categories.Parser, new[]{ "CategoriesList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.RecipeId), global::Backend.RecipeId.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Backend.IngredientLine), global::Backend.IngredientLine.Parser, new[]{ "Ingredient" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Backend.InstructionLine), global::Backend.InstructionLine.Parser, new[]{ "Instruction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.RecipeCreate), global::Backend.RecipeCreate.Parser, new[]{ "Name", "Ingredients", "Instructions", "CategoriesIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Recipe), global::Backend.Recipe.Parser, new[]{ "Id", "Name", "Ingredients", "Instructions", "CategoriesIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Backend.Recipes), global::Backend.Recipes.Parser, new[]{ "RecipesList" }, null, null, null, null)
@@ -1195,384 +1188,6 @@ namespace Backend {
 
   }
 
-  public sealed partial class IngredientLine : pb::IMessage<IngredientLine>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<IngredientLine> _parser = new pb::MessageParser<IngredientLine>(() => new IngredientLine());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<IngredientLine> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[6]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IngredientLine() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IngredientLine(IngredientLine other) : this() {
-      ingredient_ = other.ingredient_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public IngredientLine Clone() {
-      return new IngredientLine(this);
-    }
-
-    /// <summary>Field number for the "ingredient" field.</summary>
-    public const int IngredientFieldNumber = 1;
-    private string ingredient_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Ingredient {
-      get { return ingredient_; }
-      set {
-        ingredient_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as IngredientLine);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(IngredientLine other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Ingredient != other.Ingredient) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Ingredient.Length != 0) hash ^= Ingredient.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Ingredient.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Ingredient);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ingredient.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Ingredient);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Ingredient.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ingredient);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(IngredientLine other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Ingredient.Length != 0) {
-        Ingredient = other.Ingredient;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Ingredient = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Ingredient = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class InstructionLine : pb::IMessage<InstructionLine>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InstructionLine> _parser = new pb::MessageParser<InstructionLine>(() => new InstructionLine());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InstructionLine> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstructionLine() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstructionLine(InstructionLine other) : this() {
-      instruction_ = other.instruction_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstructionLine Clone() {
-      return new InstructionLine(this);
-    }
-
-    /// <summary>Field number for the "instruction" field.</summary>
-    public const int InstructionFieldNumber = 1;
-    private string instruction_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Instruction {
-      get { return instruction_; }
-      set {
-        instruction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InstructionLine);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InstructionLine other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Instruction != other.Instruction) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Instruction.Length != 0) hash ^= Instruction.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Instruction.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Instruction);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Instruction.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Instruction);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Instruction.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Instruction);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InstructionLine other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Instruction.Length != 0) {
-        Instruction = other.Instruction;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Instruction = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Instruction = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class RecipeCreate : pb::IMessage<RecipeCreate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1587,7 +1202,7 @@ namespace Backend {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1634,34 +1249,34 @@ namespace Backend {
 
     /// <summary>Field number for the "ingredients" field.</summary>
     public const int IngredientsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Backend.IngredientLine> _repeated_ingredients_codec
-        = pb::FieldCodec.ForMessage(18, global::Backend.IngredientLine.Parser);
-    private readonly pbc::RepeatedField<global::Backend.IngredientLine> ingredients_ = new pbc::RepeatedField<global::Backend.IngredientLine>();
+    private static readonly pb::FieldCodec<string> _repeated_ingredients_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> ingredients_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.IngredientLine> Ingredients {
+    public pbc::RepeatedField<string> Ingredients {
       get { return ingredients_; }
     }
 
     /// <summary>Field number for the "instructions" field.</summary>
     public const int InstructionsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Backend.InstructionLine> _repeated_instructions_codec
-        = pb::FieldCodec.ForMessage(26, global::Backend.InstructionLine.Parser);
-    private readonly pbc::RepeatedField<global::Backend.InstructionLine> instructions_ = new pbc::RepeatedField<global::Backend.InstructionLine>();
+    private static readonly pb::FieldCodec<string> _repeated_instructions_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> instructions_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.InstructionLine> Instructions {
+    public pbc::RepeatedField<string> Instructions {
       get { return instructions_; }
     }
 
     /// <summary>Field number for the "categories_ids" field.</summary>
     public const int CategoriesIdsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Backend.CategoryId> _repeated_categoriesIds_codec
-        = pb::FieldCodec.ForMessage(34, global::Backend.CategoryId.Parser);
-    private readonly pbc::RepeatedField<global::Backend.CategoryId> categoriesIds_ = new pbc::RepeatedField<global::Backend.CategoryId>();
+    private static readonly pb::FieldCodec<string> _repeated_categoriesIds_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> categoriesIds_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.CategoryId> CategoriesIds {
+    public pbc::RepeatedField<string> CategoriesIds {
       get { return categoriesIds_; }
     }
 
@@ -1854,7 +1469,7 @@ namespace Backend {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1914,34 +1529,34 @@ namespace Backend {
 
     /// <summary>Field number for the "ingredients" field.</summary>
     public const int IngredientsFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Backend.IngredientLine> _repeated_ingredients_codec
-        = pb::FieldCodec.ForMessage(26, global::Backend.IngredientLine.Parser);
-    private readonly pbc::RepeatedField<global::Backend.IngredientLine> ingredients_ = new pbc::RepeatedField<global::Backend.IngredientLine>();
+    private static readonly pb::FieldCodec<string> _repeated_ingredients_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> ingredients_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.IngredientLine> Ingredients {
+    public pbc::RepeatedField<string> Ingredients {
       get { return ingredients_; }
     }
 
     /// <summary>Field number for the "instructions" field.</summary>
     public const int InstructionsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Backend.InstructionLine> _repeated_instructions_codec
-        = pb::FieldCodec.ForMessage(34, global::Backend.InstructionLine.Parser);
-    private readonly pbc::RepeatedField<global::Backend.InstructionLine> instructions_ = new pbc::RepeatedField<global::Backend.InstructionLine>();
+    private static readonly pb::FieldCodec<string> _repeated_instructions_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> instructions_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.InstructionLine> Instructions {
+    public pbc::RepeatedField<string> Instructions {
       get { return instructions_; }
     }
 
     /// <summary>Field number for the "categories_ids" field.</summary>
     public const int CategoriesIdsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Backend.CategoryId> _repeated_categoriesIds_codec
-        = pb::FieldCodec.ForMessage(42, global::Backend.CategoryId.Parser);
-    private readonly pbc::RepeatedField<global::Backend.CategoryId> categoriesIds_ = new pbc::RepeatedField<global::Backend.CategoryId>();
+    private static readonly pb::FieldCodec<string> _repeated_categoriesIds_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> categoriesIds_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Backend.CategoryId> CategoriesIds {
+    public pbc::RepeatedField<string> CategoriesIds {
       get { return categoriesIds_; }
     }
 
@@ -2158,7 +1773,7 @@ namespace Backend {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Backend.BigOvenReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
