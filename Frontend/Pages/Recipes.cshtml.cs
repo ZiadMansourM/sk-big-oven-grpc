@@ -19,9 +19,6 @@ public class RecipesModel : PageModel
     public async Task OnGet(List<string> msgs)
     {
         Recipes recipes = await Requests.ListRecipes();
-        //foreach (Recipe recipe in recipes.RecipesList)
-        //    foreach (string ing in recipe.Ingredients)
-        //        Console.WriteLine(ing);
         foreach (Recipe recipe in recipes.RecipesList)
             RecipesRes.Add(recipe);
         Categories categories = await Requests.ListCategories();
@@ -38,16 +35,22 @@ public class RecipesModel : PageModel
         // Ingredients
         string ingredients = Request.Form["ingredients"];
         List<string> ingredientslist = ingredients.Split(spearator,
-           StringSplitOptions.RemoveEmptyEntries).ToList();
+           StringSplitOptions.RemoveEmptyEntries).Select(i => i.Trim()).ToList();
         // Instructions
         string instructions = Request.Form["instructions"];
         List<string> instructionslist = instructions.Split(spearator,
-           StringSplitOptions.RemoveEmptyEntries).ToList();
+           StringSplitOptions.RemoveEmptyEntries).Select(i => i.Trim()).ToList();
         // Guids
         List<Guid> guidIds = new();
         foreach (var guid in Request.Form["categoriesIds"])
             guidIds.Add(new Guid(guid));
         // Validation
+        bool valid = !(
+            String.IsNullOrEmpty(name) &&
+            String.IsNullOrEmpty(ingredients) &&
+            String.IsNullOrEmpty(instructions)
+        );
+        // Create
         RecipeCreate recipeCreate = new RecipeCreate{ Name=name };
         foreach (string ing in ingredientslist)
             recipeCreate.Ingredients.Add(ing);
@@ -55,7 +58,17 @@ public class RecipesModel : PageModel
             recipeCreate.Instructions.Add(ins);
         foreach (Guid id in guidIds)
             recipeCreate.CategoriesIds.Add(id.ToString());
-        await Requests.CreateRecipe(recipeCreate);
+        // Send
+        if (valid)
+            await Requests.CreateRecipe(recipeCreate);
+        else
+        {
+            List<string> msgs = new();
+            msgs.Add(
+                $"Recipe name, ingredients and instructions can not be empty!"
+            );
+            Messages = msgs;
+        }
         return RedirectToPage("./Recipes", new { msgs = Messages });
     }
 
@@ -67,16 +80,22 @@ public class RecipesModel : PageModel
         // Ingredients
         string ingredients = Request.Form["ingredients"];
         List<string> ingredientslist = ingredients.Split(spearator,
-           StringSplitOptions.RemoveEmptyEntries).ToList();
+           StringSplitOptions.RemoveEmptyEntries).Select(i => i.Trim()).ToList();
         // Instructions
         string instructions = Request.Form["instructions"];
         List<string> instructionslist = instructions.Split(spearator,
-           StringSplitOptions.RemoveEmptyEntries).ToList();
+           StringSplitOptions.RemoveEmptyEntries).Select(i => i.Trim()).ToList();
         // Guids
         List<Guid> guidIds = new();
         foreach (var guid in Request.Form["categoriesIds"])
             guidIds.Add(new Guid(guid));
         // Validation
+        bool valid = (
+            !String.IsNullOrEmpty(name) &&
+            !String.IsNullOrEmpty(ingredients) &&
+            !String.IsNullOrEmpty(instructions)
+        );
+        // Create
         Recipe recipe = new Recipe { Id = id.ToString(), Name = name };
         foreach (string ing in ingredientslist)
             recipe.Ingredients.Add(ing);
@@ -84,7 +103,17 @@ public class RecipesModel : PageModel
             recipe.Instructions.Add(ins);
         foreach (Guid guid in guidIds)
             recipe.CategoriesIds.Add(guid.ToString());
-        await Requests.UpdateRecipe(recipe);
+        // Send
+        if (valid)
+            _ = await Requests.UpdateRecipe(recipe);
+        else
+        {
+            List<string> msgs = new();
+            msgs.Add(
+                $"Recipe name, ingredients and instructions can not be empty!"
+            );
+            Messages = msgs;
+        }
         return RedirectToPage("./Recipes", new { msgs = Messages });
     }
 
