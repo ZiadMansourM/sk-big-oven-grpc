@@ -138,3 +138,7 @@ td a:hover {
   text-decoration: none;
   color: rgb(232, 141, 14);
 }
+
+.bg-body-custom {
+    background-color: hsl(218, 41%, 15%)!important;
+}
