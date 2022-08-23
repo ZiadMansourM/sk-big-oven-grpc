@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FluentValidation.Results;
+using System.Reflection;
 
 namespace Frontend.Pages;
 
@@ -23,13 +24,33 @@ public class CategoriesModel : PageModel
 
     public async Task<IActionResult> OnPostCreate(string categoryName)
     {
-        _ = await Requests.CreateCategory(categoryName);
+        bool valid = !(String.IsNullOrEmpty(categoryName));
+        if (valid)
+            _ = await Requests.CreateCategory(categoryName.Trim());
+        else
+        {
+            List<string> msgs = new();
+            msgs.Add(
+                $"Please enter category name!"
+            );
+            Messages = msgs;
+        }
         return RedirectToPage("./Categories", new { msgs = Messages });
     }
 
     public async Task<IActionResult> OnPostUpdate(string id, string categoryName)
     {
-        _ = await Requests.UpdateCategory(new Guid(id), categoryName);
+        bool valid = !(String.IsNullOrEmpty(categoryName));
+        if (valid)
+            _ = await Requests.UpdateCategory(new Guid(id), categoryName);
+        else
+        {
+            List<string> msgs = new();
+            msgs.Add(
+                $"Category name can not be empty!"
+            );
+            Messages = msgs;
+        }
         return RedirectToPage("./Categories", new { msgs = Messages });
     }
 
